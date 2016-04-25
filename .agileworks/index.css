@@ -1,0 +1,21 @@
+.workshop {
+    padding: 10px;
+}
+
+h1 {
+    color: #000;
+    font-size: 18px;
+}
+
+p, ul li {
+    line-height: 150%;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff0000;
+}
