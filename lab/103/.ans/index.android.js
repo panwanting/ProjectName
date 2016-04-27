@@ -36,8 +36,16 @@ class MyApp extends Component {
     .then((responseData) => {
       if (responseData.photos) {
         console.log(responseData.photos.photo.length);
+        
+        var photos = [];
+        
+        for (var i=0; i < responseData.photos.photo.length; i++) {
+          var photo = responseData.photos.photo[i];
+          photos.push({imgUrl: 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg'});
+        }
+        
         this.setState({
-          dataSource: this.state.dataSource.cloneWithRows(responseData.photos.photo)
+          dataSource: this.state.dataSource.cloneWithRows(photos)
         });
       }
     })
@@ -50,13 +58,15 @@ class MyApp extends Component {
         <TextInput
           autoCapitalize="none"
           autoCorrect={false}
-          placeholder="Search for a project..."
+          placeholder="Keyword..."
           style={styles.searchBarInput}
           onEndEditing={this.onSearchChange} />
         <ListView
           contentContainerStyle={styles.row}
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}
+          initialListSize={21}
+          scrollRenderAheadDistance={100}
         />
       </View>
     );
@@ -66,8 +76,7 @@ class MyApp extends Component {
     return (
       <Image
         style={styles.picture}
-        defaultSource={require('./placeholder.png')}
-        source={{uri: 'https://farm'+row.farm+'.staticflickr.com/'+row.server+'/'+row.id+'_'+row.secret+'.jpg'}} />
+        source={{uri: row.imgUrl}} />
     );
   }
 }
@@ -93,12 +102,6 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     margin: 5,
-  },
-  tilte: {
-    justifyContent: 'center',
-    padding: 5,
-    fontSize: 25,
-    fontWeight: 'bold',
   }
 });
 
