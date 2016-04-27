@@ -1,4 +1,4 @@
-# Lab 101 - Hello World
+# Lab 101 - Hello
 
 主畫面顯示「Hello World」文字！
 

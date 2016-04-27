@@ -1,4 +1,4 @@
-# Lab 102 - Style
+# Lab 102 - Layout
 
 React Native 使用類似 CSS 的方式定義畫面的 Layout。
 
@@ -14,8 +14,7 @@ React Native 使用類似 CSS 的方式定義畫面的 Layout。
 
 * 新建 React Native 專案命名為「`MyApp`」。
 * 在畫面上顯示圖片：`http://lorempixel.com/320/320/sports/1`
-* 設置 `placeholder.png` 在網路傳輸過程中顯示圖片。
-
+* 在畫面上顯示 12 張照片（排列為 3 x 4）。
 
 參考資料：`lorempixel.com` 的圖片分類：
 

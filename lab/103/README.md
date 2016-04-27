@@ -1,4 +1,4 @@
-# Lab 103 - Finder
+# Lab 103 - Flickr
 
 實作一個 Flickr 照片搜尋器。
 
