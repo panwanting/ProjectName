@@ -38,9 +38,10 @@ https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
 
 https://www.flickr.com/services/api/misc.urls.html
 
-## 測試
+## 測試說明
 
 * 請檢視 Android 模擬器畫面，確認程式是否正確執行。
+* 在搜尋文字框輸入一個關鍵詞，再按下方空白處，等待清單顯示照片搜尋結果。
 
 ## 參考畫面
 

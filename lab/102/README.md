@@ -10,7 +10,7 @@ React Native 使用類似 CSS 的方式定義畫面的 Layout。
 
 * 使用 `Image` UI Component
 
-## 題目
+## 題目說明
 
 * 新建 React Native 專案命名為「`MyApp`」。
 * 在畫面上顯示圖片：`http://lorempixel.com/320/320/sports/1`
@@ -25,7 +25,7 @@ food        nightlife   fashion     people      nature
 sports      technics    transport
 ```
 
-## 測試
+## 測試說明
 
 * 請檢視 Android 模擬器畫面，確認程式是否正確執行。
 
