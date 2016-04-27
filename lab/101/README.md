@@ -28,4 +28,4 @@
 
 ## 參考畫面
 
-![screencap](/preview/lab/101/screencap.png)
+![screencap](screencap.png)

@@ -31,4 +31,4 @@ sports      technics    transport
 
 ## 參考畫面
 
-![screencap](/preview/lab/102/screencap.png)
+![screencap](screencap.png)
