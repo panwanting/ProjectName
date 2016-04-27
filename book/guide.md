@@ -14,6 +14,12 @@ https://briian.com/15110/genymotion.html
 
 假設我們在 Host（實體主機）透過 Genymotion 運行 Android x86 模擬器，並透過 VM Guest 的開發環境連線到 Host。
 
+建議使用的 Genymotion Virtual Device
+
+```
+Google Nexus 7 - 4.1.1 - API 16 - 800x1280
+```
+
 先在 Host 列出裝置清單：
 
 ```
@@ -47,3 +53,8 @@ react-native init MyApp
 react-native run-android
 ```
 
+啟動 React Native 伺服器：
+
+```
+react-native start
+```
