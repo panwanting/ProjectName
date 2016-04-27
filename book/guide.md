@@ -17,7 +17,7 @@ https://briian.com/15110/genymotion.html
 建議使用的 Genymotion Virtual Device
 
 ```
-Google Nexus 7 - 4.1.1 - API 16 - 800x1280
+Google Nexus 4 - 4.3 - API 18 - 768x1280
 ```
 
 先在 Host 列出裝置清單：

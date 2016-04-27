@@ -46,3 +46,5 @@ https://www.flickr.com/services/api/misc.urls.html
 ## 參考畫面
 
 ![screencap](screencap.png)
+
+下載範例：[MyApp.apk](MyApp.apk)
