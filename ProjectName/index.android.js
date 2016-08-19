@@ -11,49 +11,46 @@ import {  //要使用標籤記得現在這邊輸入該標籤import
   Text,
   View,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  Image
 } from 'react-native';
 
 class ProjectName extends Component {
   
   constructor(props){
     super(props);
-    this.state={ text1: 'height', //text1的預設值是123 
-                text2: 'weight', //text2的預設值是456
-                text3: 'BMI'
+    this.state={ text1: 'pokemon index' ,//text1的預設值是123 
+                tex2: ''
+               
     }
   }
   
   onPress = () => {        
         console.log('pressed');  
-        
-        var h = this.state.text1 / 100 ; 
-        var w = this.state.text2 ;
-        var bmi = w/(h*h) ;
-        this.setState({text3:bmi})
+        this.setState({text2: this.state.text1});
+      
   }
   
   render() { //若textinput有預設值的話 一定要用onchangetext依照新輸入的值去做更新 否則無法取新輸入的值
     return (
      
       <View style={styles.container}> 
-       <Text>Height:(please enter cm)</Text><TextInput
+       <Text>pokemon index</Text><TextInput
         style={{height: 40, borderColor: 'gray', width: 80}}
         onChangeText={(text1) => this.setState({text1})}  //框框輸入的text1去setState更新constructor裡面預設的text1
         value={this.state.text1} //原本預設的123會被更新成框框輸入的  
        /> 
-       <Text>Weight:</Text>
-       <TextInput
-        style={{height: 40, borderColor: 'gray', width: 80}}
-        onChangeText={(text2) => this.setState({text2})} 
-        value={this.state.text2} 
-       />
       
-        <TouchableOpacity style={{backgroundColor: 'gray'}} onPress={this.onPress}>
-          <Text>cal BMI</Text> 
+      
+        <TouchableOpacity style={{backgroundColor: 'gray', width: 150 ,height:50 ,textAlign: 'center',fontSize: 20}}  onPress={this.onPress}>
+          <Text>submit</Text> 
         </TouchableOpacity>
         
-        <Text>BMI is {this.state.text3}</Text> 
+        <Image
+        style={{height: 80, width: 80}} //圖片記得設定寬度跟高度 預設值是0
+        source={{uri: `https://pokeadvisor.com/img/mon/${this.state.text2}.png`}}
+        />
+        
   
        
         <Text style={styles.welcome}>
