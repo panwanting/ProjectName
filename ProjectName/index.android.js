@@ -19,37 +19,35 @@ class ProjectName extends Component {
   
   constructor(props){
     super(props);
-    this.state={ text1: 'pokemon index' ,//text1的預設值是123 
-                tex2: ''
+    this.state={ text1: ' ' ,//text1的預設值是123 
+               active: false  //預設active是false
+            
                
     }
   }
   
   onPress = () => {        
-        console.log('pressed');  
-        this.setState({text2: this.state.text1});
+        console.log('pressed'); 
+        this.setState({active: !this.state.active}) //當點急按鈕 會發生的事情,在此是只會變換active的值 上面預設是false,點按鈕就會變成true,反之
+        
+       
       
   }
   
   render() { //若textinput有預設值的話 一定要用onchangetext依照新輸入的值去做更新 否則無法取新輸入的值
     return (
      
-      <View style={styles.container}> 
-       <Text>pokemon index</Text><TextInput
-        style={{height: 40, borderColor: 'gray', width: 80}}
-        onChangeText={(text1) => this.setState({text1})}  //框框輸入的text1去setState更新constructor裡面預設的text1
-        value={this.state.text1} //原本預設的123會被更新成框框輸入的  
-       /> 
+      <View style={[styles.container,
+                    this.state.active && styles.button1, //當是active的預設值(true),styles.button1採用
+                    !this.state.active && styles.button2, //當是active的相反值(false),styles.button2採用
       
+      ]}> 
+
       
         <TouchableOpacity style={{backgroundColor: 'gray', width: 150 ,height:50 ,textAlign: 'center',fontSize: 20}}  onPress={this.onPress}>
-          <Text>submit</Text> 
+        <Text>change</Text>
         </TouchableOpacity>
         
-        <Image
-        style={{height: 80, width: 80}} //圖片記得設定寬度跟高度 預設值是0
-        source={{uri: `https://pokeadvisor.com/img/mon/${this.state.text2}.png`}}
-        />
         
   
        
@@ -70,7 +68,8 @@ class ProjectName extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1, //與其他子元素的比例分配  1就是父元素本身了 
+    //flexDirection: 'row', 變成橫的排 不會直的排
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
@@ -85,6 +84,15 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  
+  button1: {
+    backgroundColor:'lightblue'
+  },
+  
+  button2: {
+    backgroundColor:'lightgreen'
+  }
+  
 });
 
 AppRegistry.registerComponent('ProjectName', () => ProjectName);
