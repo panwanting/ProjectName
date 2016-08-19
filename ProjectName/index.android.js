@@ -17,7 +17,7 @@ class ProjectName extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native! yoyoyoyoyo
+          Welcome to React Native! yoyo
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.android.js
